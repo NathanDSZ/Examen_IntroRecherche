@@ -100,7 +100,7 @@ Chebyshev coefficients for shape regression, circled in red.}
 \section{Implementation details}
 
 We use the MMDetection 2.7.0 object detection toolbox
-\cite{chen2019mmdetection}, based onMMCV1.2.1 for easy and fair comparison
+\cite{chen2019mmdetection} \text{\color{blue} (A little part of the OpenMMLab which can also be used} \text{\color{blue}  for 3D Detection \cite{contributors2020mmdetection3d})}, based onMMCV1.2.1 for easy and fair comparison
 with other methods. The underlying framework is PyTorch
 1.7.0 with CUDA 10.1. We make use of the updated FFT
 package from PyTorch 1.7.0 which allows the use of complex
@@ -139,7 +139,7 @@ and settled on the following values: $\lambda_{cls}$=1.0, $\lambda_{cent}$=1.0,
 $\lambda_{CD}$=1.0, $\lambda_{perim}$=0.01, $\lambda_{coeff}$=500.0.
 
 Due to software incompatibilities during the conversion
-of our DarkNet-53 model for low-power hardware targets,
+of our DarkNet-53 model \text{\color{blue} (Which is better and x1.5 faster than ResNet101 \cite{redmon2018yolov3})} for low-power hardware targets,
 we had to simplify the architecture by removing deformable
 convolutions and CARAFE, as shown in \Cref{tab:tabl}.
 
