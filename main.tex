@@ -30,7 +30,7 @@
 
 
     We demonstrate why Chebyshev coefficients, as used
-in [37], are not well suited to the regression of continuous
+in \cite{xu2019explicit}, are not well suited to the regression of continuous
 periodic functions through a neural network.
 
 Chebyshev polynomials are obtained through the following
@@ -100,12 +100,12 @@ Chebyshev coefficients for shape regression, circled in red.}
 \section{Implementation details}
 
 We use the MMDetection 2.7.0 object detection toolbox
-[4], based onMMCV1.2.1 for easy and fair comparison
+\cite{chen2019mmdetection}, based onMMCV1.2.1 for easy and fair comparison
 with other methods. The underlying framework is PyTorch
 1.7.0 with CUDA 10.1. We make use of the updated FFT
 package from PyTorch 1.7.0 which allows the use of complex
 numbers. We use the Chamfer Distance implementation
-from PyTorch3D 0.3.0 [24]. The interpolation scheme
+from PyTorch3D 0.3.0 \cite{ravi2020accelerating}. The interpolation scheme
 described in section 3 of the main text is implemented as a
 module in the MMDetection data loading pipeline using the
 \texttt{interp} module from Numpy.
@@ -121,7 +121,7 @@ module in the MMDetection data loading pipeline using the
     \end{tabular}
     \caption{Characteristics of our main networks. Variations are further
 explored in our ablation study. DCN refers to the use of Deformable
-Convolution v2 [39] layers in the head. CARAFE refers
+Convolution v2 \cite{zhu2019deformable} layers in the head. CARAFE refers
 to the use of the FPN-CARAFE [32] neck. Training time on 8
 Tesla V100 GPUs.}
     \label{tab:tabl}
@@ -188,7 +188,7 @@ wonder about the environmental impact. For this paper, we
 missed the opportunity to track the real power consumption
 of our experiments, and to estimate its global environmental
 footprint, but we are trying as much as we can to publish
-these estimations, as recommended in [1, 10, 14].
+these estimations, as recommended in \cite{anthony2020carbontracker,henderson2020towards,lannelongue2020green}.
 
 In order to run the experiments required for our main results
 and ablation study, we have used 5864.55 GPU hours
@@ -199,7 +199,7 @@ different trials or hyper-parameter searches on workstations,
 amounts to 1759kWh. Since the carbon intensity of our
 electricity grid is 10 gCO2/kWh, we estimate an emission
 of 17590 gCO2, which is equivalent to 146 km traveled by
-car according to [1].
+car according to \cite{anthony2020carbontracker}.
 
 \section{Qualitative results}
 
@@ -207,6 +207,13 @@ In this section, we provide an extended selection of qualitative
 results that could not be part of the main paper for
 space reasons. Figures 9 and 8 show results from our smallest
 and fastest DarkNet-53-based model.
+
+\newpage
+
+{\small
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+}
 
 
 \end{document}
